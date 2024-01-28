@@ -17,7 +17,7 @@ def print_separator():
     print(">------------------------------------------------------<")
 
 def check_for_updates():
-    url = "https://raw.githubusercontent.com/Titzn/Brut-force-SocialMedia/main/force.py"
+    url = "https://raw.githubusercontent.com/Titzn/Python-Brute-Force/main/force.py"
     response = requests.get(url)
     
     if response.status_code == 200:
