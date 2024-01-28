@@ -30,10 +30,8 @@ The script includes an update check feature. To manually update the script, run 
 ![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/de51eb7f-2ec8-4eae-80cd-c2a07ae79bff)
 
 
-![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/6b13fce4-b92d-4e36-8648-37742536c27a)
-
-
 ## Modules
+![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/6b13fce4-b92d-4e36-8648-37742536c27a)
 - [Instagram](./data/instagram.py)
 - [TikTok (Coming Soon)](./data/tiktok.py)
 - [Snapchat (Coming Soon)](./data/snapchat.py)
@@ -42,11 +40,11 @@ The script includes an update check feature. To manually update the script, run 
 - [Vinted (Coming Soon)](./data/vinted.py)
 - [Gmail (Coming Soon)](./data/gmail.py)
 
-![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/cab58139-2ce5-4a5b-bd4e-7e5060fa9963)
-
 
 ## Options
 The script provides an option to configure specific settings. Refer to the script for more details.
+
+![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/cab58139-2ce5-4a5b-bd4e-7e5060fa9963)
 
 ## Disclaimer
 This script is meant for educational purposes only. Use it responsibly and ensure compliance with the applicable laws and ethical standards. The author is not responsible for any misuse or unauthorized access.
