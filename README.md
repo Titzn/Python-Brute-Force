@@ -26,6 +26,7 @@ This Python script is a versatile brute force tool designed for various social m
 
 ## Updating the Script
 The script includes an update check feature. To manually update the script, run it and select the update option when prompted.
+
 ![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/de51eb7f-2ec8-4eae-80cd-c2a07ae79bff)
 
 
