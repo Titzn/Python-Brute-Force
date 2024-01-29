@@ -95,8 +95,8 @@ def main():
 
     script_dict = {
         "1": os.path.join("data", "instagram.py"),
-        "2": os.path.join("data", "tiktok.py"),
-        "3": os.path.join("data", "snapchat.py"),
+        "2": os.path.join("data", "snapchat.py"),
+        "3": os.path.join("data", "tiktok.py"),
         "4": os.path.join("data", "leboncoin.py"),
         "5": os.path.join("data", "ebay.py"),
         "6": os.path.join("data", "vinted.py"),
@@ -105,9 +105,9 @@ def main():
 
     print_separator()
     print(f"{Fore.BLUE}     [1] Instagram               {Fore.BLUE}[5] ...(Soon)")
-    print(f"{Fore.LIGHTCYAN_EX}     [2] Tiktok(Soon)            {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
-    print(f"{Fore.CYAN}     [3] Snapchat(Soon)          {Fore.CYAN}[7] ...(Soon)")
-    print(f"{Fore.MAGENTA}     [4] Gmail(Soon)         {Fore.MAGENTA}[8] Options" + Fore.RESET)
+    print(f"{Fore.LIGHTCYAN_EX}     [2] Snapchat score            {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
+    print(f"{Fore.CYAN}     [3] Tiktok(Soon)          {Fore.CYAN}[7] ...(Soon)")
+    print(f"{Fore.MAGENTA}     [4] Gmail(Soon)           {Fore.MAGENTA}[8] Options" + Fore.RESET)
     print_separator()
 
     user_choice = input(Fore.YELLOW + "\nPlease choose a number: " + Fore.RESET)
