@@ -3,6 +3,7 @@ import threading
 import time
 import os
 import re
+import sys
 from stem import Signal
 from stem.control import Controller
 from datetime import datetime
