@@ -76,7 +76,7 @@ def main():
 
     print(Fore.GREEN + """
 
-                     vprebeta[0.111]
+                     vprebeta[0.1]
  ______  ____  ______   ____  ____       ____   ____  __ __  ______    ___        _____   ___   ____      __    ___ 
 |      ||    ||      | /    ||    \     |    \ |    \|  |  ||      |  /  _]      |     | /   \ |    \    /  ]  /  _]
 |      | |  | |      ||  o  ||  _  |    |  o  )|  D  )  |  ||      | /  [_ _____ |   __||     ||  D  )  /  /  /  [_ 
@@ -104,8 +104,8 @@ def main():
     }
 
     print_separator()
-    print(f"{Fore.BLUE}     [1] Instagram              {Fore.BLUE}[5] ...(Soon)")
-    print(f"{Fore.LIGHTCYAN_EX}     [2] Snapchat score          {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
+    print(f"{Fore.BLUE}     [1] Instagram               {Fore.BLUE}[5] ...(Soon)")
+    print(f"{Fore.LIGHTCYAN_EX}     [2] Snapchat score            {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
     print(f"{Fore.CYAN}     [3] Tiktok(Soon)          {Fore.CYAN}[7] ...(Soon)")
     print(f"{Fore.MAGENTA}     [4] Gmail(Soon)           {Fore.MAGENTA}[8] Options" + Fore.RESET)
     print_separator()
