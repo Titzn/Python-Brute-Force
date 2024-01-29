@@ -1,28 +1,14 @@
-import importlib
-
-# List of required modules
-required_modules = ['ctypes', 'pyautogui', 'keyboard', 'os', 'time', 'platform', 'datetime', 'colorama']
-
-# Iterate over the required modules
-for module in required_modules:
-    try:
-        # Try to import the module
-        importlib.import_module(module)
-    except ImportError:
-        # If the module is not installed, install it
-        print(f"Module '{module}' not found. Installing...")
-        os.system(f"pip install {module}")
-
-# Now you can safely import the modules
-import ctypes
-import pyautogui
-import keyboard
-import os
-import time
-import platform
-from datetime import datetime
-from colorama import Fore
-
+try:
+    import ctypes
+    import pyautogui
+    import keyboard
+    import os
+    import time
+    import platform
+    from datetime import datetime
+    from colorama import Fore
+except ImportError:
+    input("Error while importing modules. Please install the modules in requirements.txt")
 
 class SnapchatBot:
     CAMERA_BUTTON = "camera button"
