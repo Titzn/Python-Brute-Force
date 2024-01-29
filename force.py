@@ -1,4 +1,19 @@
-# Add this import statement at the beginning of your force.py script
+import importlib
+
+# List of required modules
+required_modules = ['re', 'threading', 'sys', 'requests', 'hashlib', 'os', 'smtplib', 'colorama', 'tqdm']
+
+# Iterate over the required modules
+for module in required_modules:
+    try:
+        # Try to import the module
+        importlib.import_module(module)
+    except ImportError:
+        # If the module is not installed, install it
+        print(f"Module '{module}' not found. Installing...")
+        os.system(f"pip install {module}")
+
+# Now you can safely import the modules
 import re
 import threading
 import sys
