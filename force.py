@@ -98,9 +98,9 @@ def main():
     }
 
     print_separator()
-    print(f"{Fore.BLUE}     [1] Instagram             {Fore.BLUE}[5] ...(Soon)")
-    print(f"{Fore.LIGHTCYAN_EX}    [2] ...(Soon)        {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
-    print(f"{Fore.CYAN}     [3] ...(Soon)          {Fore.CYAN}[7] ...(Soon)")
+    print(f"{Fore.BLUE}     [1] Instagram           {Fore.BLUE}[5] ...(Soon)")
+    print(f"{Fore.LIGHTCYAN_EX}     [2] ...(Soon)           {Fore.LIGHTCYAN_EX}[6] ...(Soon)")
+    print(f"{Fore.CYAN}     [3] ...(Soon)           {Fore.CYAN}[7] ...(Soon)")
     print(f"{Fore.MAGENTA}     [4] ...(Soon)           {Fore.MAGENTA}[8] Options" + Fore.RESET)
     print_separator()
 
