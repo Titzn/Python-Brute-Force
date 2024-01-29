@@ -1,19 +1,10 @@
 import importlib
-
-# List of required modules
-required_modules = ['re', 'threading', 'sys', 'requests', 'hashlib', 'os', 'smtplib', 'colorama', 'tqdm']
-
-# Iterate over the required modules
-for module in required_modules:
-    try:
-        # Try to import the module
-        importlib.import_module(module)
-    except ImportError:
-        # If the module is not installed, install it
-        print(f"Module '{module}' not found. Installing...")
-        os.system(f"pip install {module}")
-
-# Now you can safely import the modules
+import subprocess
+import hashlib
+import requests
+import colorama
+from colorama import Fore
+import time
 import re
 import threading
 import sys
@@ -22,11 +13,9 @@ import hashlib
 import os
 import smtplib
 import colorama
-from colorama import Fore
-import time
-from tqdm import tqdm
-colorama.init()
+import tqdm
 
+colorama.init()
 
 def print_separator():
     print(">------------------------------------------------------<")
@@ -74,19 +63,17 @@ def run_selected_script(script_dict, user_choice):
 def main():
     check_for_updates()
 
-    print(Fore.GREEN + """
-
+    print(Fore.GREEN + f"""
                      vprebeta[0.1]
  ______  ____  ______   ____  ____       ____   ____  __ __  ______    ___        _____   ___   ____      __    ___ 
 |      ||    ||      | /    ||    \     |    \ |    \|  |  ||      |  /  _]      |     | /   \ |    \    /  ]  /  _]
 |      | |  | |      ||  o  ||  _  |    |  o  )|  D  )  |  ||      | /  [_ _____ |   __||     ||  D  )  /  /  /  [_ 
 |_|  |_| |  | |_|  |_||     ||  |  |    |     ||    /|  |  ||_|  |_||    _]     ||  |_  |  O  ||    /  /  /  |    _]
-  |  |   |  |   |  |  |  _  ||  |  |    |  O  ||    \|  :  |  |  |  |   [_|_____||   _] |     ||    \ /   \_ |   [_ 
+  |  |   |  |   |  |  |  _  ||  |  |    |  O  ||    \|  :  |  |  |  |   [_|_____||   _] |     ||  .  \\     ||     |
   |  |   |  |   |  |  |  |  ||  |  |    |     ||  .  \     |  |  |  |     |      |  |   |     ||  .  \\     ||     |
   |__|  |____|  |__|  |__|__||__|__|    |_____||__|\_|\__,_|  |__|  |_____|      |__|    \___/ |__|\_| \____||_____|
                                    [+]Github: https://github.com/Titzn/
                                    [+]Discord: titzn
-                                                                                                          
     """ + Fore.RESET)
     time.sleep(0.1)
 
