@@ -1,40 +1,45 @@
-ascii_text = """ 
-
-   _____                        _           _      __                    __    _                _       
-  / ____|                      | |         | |    / /                    \ \  | |              | |      
- | (___  _ __   __ _ _ __   ___| |__   __ _| |_  | |___  ___ ___  _ __ ___| | | |__  _ __ _   _| |_ ___ 
-  \___ \| '_ \ / _` | '_ \ / __| '_ \ / _` | __| | / __|/ __/ _ \| '__/ _ \ | | '_ \| '__| | | | __/ _ /
-  ____) | | | | (_| | |_) | (__| | | | (_| | |_  | \__ \ (_| (_) | | |  __/ | | |_) | |  | |_| | ||  __/
- |_____/|_| |_|\__,_| .__/ \___|_| |_|\__,_|\__| | |___/\___\___/|_|  \___| | |_.__/|_|   \__,_|\__\___|
-                    | |                           \_\                    /_/                            
-                    |_|                                                                                 
-"""
 try:
-    from colorama import Fore
-    import ctypes, pyautogui, keyboard, os, time, platform
+    import ctypes
+    import pyautogui
+    import keyboard
+    import os
+    import time
+    import platform
     from datetime import datetime
+    from colorama import Fore
 except ImportError:
     input("Error while importing modules. Please install the modules in requirements.txt")
 
 class SnapchatBot:
+    CAMERA_BUTTON = "camera button"
+    TAKE_PICTURE_BUTTON = "take picture button"
+    ARROW_DOWN_BUTTON = "arrow down button"
+    MULTI_SNAP_BUTTON = "Multi Snap button"
+    EDIT_SEND_BUTTON = "Edit & Send button"
+    SEND_TO_BUTTON = "Send To button"
+    SHORTCUT_BUTTON = "shortcut"
+    SELECT_ALL_IN_SHORTCUT_BUTTON = "select all in shortcut"
+    SEND_SNAP_BUTTON = "send snap button"
+
     def __init__(self):
         self.sent_snaps = 0
         self.delay = 1.3
+        self.started_time = None
 
     def on_linux(self):
         return platform.system() == "Linux"
 
     def get_positions(self):
         positions = [
-            "camera button",
-            "take picture button",
-            "arrow down button",
-            "Multi Snap button",
-            "Edit & Send button",
-            "Send To button",
-            "shortcut",
-            "select all in shortcut",
-            "send snap button"
+            self.CAMERA_BUTTON,
+            self.TAKE_PICTURE_BUTTON,
+            self.ARROW_DOWN_BUTTON,
+            self.MULTI_SNAP_BUTTON,
+            self.EDIT_SEND_BUTTON,
+            self.SEND_TO_BUTTON,
+            self.SHORTCUT_BUTTON,
+            self.SELECT_ALL_IN_SHORTCUT_BUTTON,
+            self.SEND_SNAP_BUTTON
         ]
 
         for pos in positions:
@@ -49,29 +54,29 @@ class SnapchatBot:
         self.update_title(shortcut_users)
 
         # Switch to camera and take 7 pictures
-        pyautogui.moveTo(self.camera_button)
+        pyautogui.moveTo(getattr(self, self.CAMERA_BUTTON))
         pyautogui.click()
         time.sleep(self.delay)
-        pyautogui.moveTo(self.take_picture)
+        pyautogui.moveTo(getattr(self, self.TAKE_PICTURE_BUTTON))
         for _ in range(7):
             pyautogui.click()
             time.sleep(self.delay)
 
         # Edit and send the snaps
-        pyautogui.moveTo(self.edit_send)
+        pyautogui.moveTo(getattr(self, self.EDIT_SEND_BUTTON))
         time.sleep(self.delay)
         pyautogui.click()
-        pyautogui.moveTo(self.send_to)
+        pyautogui.moveTo(getattr(self, self.SEND_TO_BUTTON))
         pyautogui.click()
         time.sleep(self.delay)
 
         # Select recipients and send snaps
-        pyautogui.moveTo(self.shortcut)
+        pyautogui.moveTo(getattr(self, self.SHORTCUT_BUTTON))
         pyautogui.click()
         time.sleep(self.delay)
-        pyautogui.moveTo(self.select_all)
+        pyautogui.moveTo(getattr(self, self.SELECT_ALL_IN_SHORTCUT_BUTTON))
         pyautogui.click()
-        pyautogui.moveTo(self.send_snap_button)
+        pyautogui.moveTo(getattr(self, self.SEND_SNAP_BUTTON))
         pyautogui.click()
 
         self.sent_snaps += 7
@@ -95,6 +100,17 @@ class SnapchatBot:
             ctypes.windll.kernel32.SetConsoleTitleW("Snapchat Score Botter | Developed by @Titzn on Github")
         else:
             os.system("clear")
+
+        ascii_text = """
+   _____                        _           _      __                    __    _                _       
+  / ____|                      | |         | |    / /                    \ \  | |              | |      
+ | (___  _ __   __ _ _ __   ___| |__   __ _| |_  | |___  ___ ___  _ __ ___| | | |__  _ __ _   _| |_ ___ 
+  \___ \| '_ \ / _` | '_ \ / __| '_ \ / _` | __| | / __|/ __/ _ \| '__/ _ \ | | '_ \| '__| | | | __/ _ /
+  ____) | | | | (_| | |_) | (__| | | | (_| | |_  | \__ \ (_| (_) | | |  __/ | | |_) | |  | |_| | ||  __/
+ |_____/|_| |_|\__,_| .__/ \___|_| |_|\__,_|\__| | |___/\___\___/|_|  \___| | |_.__/|_|   \__,_|\__\___|
+                    | |                           \_\                    /_/                            
+                    |_|                                                                                 
+"""
 
         print(Fore.RED + ascii_text)
 
