@@ -88,9 +88,6 @@ def main():
                                    [+]Discord: titzn
                                                                                                           
     """ + Fore.RESET)
-
-    frames = ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-    for _ in tqdm(range(5), desc=Fore.RED + "Loading modules...", ascii=False, ncols=75):
         time.sleep(0.1)
 
     script_dict = {
