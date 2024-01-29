@@ -4,8 +4,7 @@
 This Python script is a versatile brute force tool designed for various social media platforms and online services. It includes modules for popular platforms like Instagram, TikTok, Snapchat, Leboncoin, Ebay, Vinted, and Gmail.
 
 **Note:** This script is intended for educational purposes only. Unauthorized access to accounts or systems is illegal and unethical.
-![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/ba939189-57a2-41f9-bda5-7fc9664c45be)
-
+![image](https://github.com/Titzn/Python-Brute-Force/assets/139163394/b7044429-40ba-4f9d-b634-409acedfe142)
 
 
 ## Features
