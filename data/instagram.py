@@ -1,12 +1,29 @@
+import importlib
+
+# List of required modules
+required_modules = ['requests', 'threading', 'time', 'os', 're', 'datetime', 'stem', 'sys']
+
+# Iterate over the required modules
+for module in required_modules:
+    try:
+        # Try to import the module
+        importlib.import_module(module)
+    except ImportError:
+        # If the module is not installed, install it
+        print(f"Module '{module}' not found. Installing...")
+        os.system(f"pip install {module}")
+
+# Now you can safely import the modules
 import requests
 import threading
 import time
 import os
-import re  # Add this line to import the 're' module
+import re
 from datetime import datetime
 from stem import Signal
 from stem.control import Controller
 import sys
+
 
 class InstaBrute:
     def __init__(self):
