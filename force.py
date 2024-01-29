@@ -88,7 +88,7 @@ def main():
                                    [+]Discord: titzn
                                                                                                           
     """ + Fore.RESET)
-        time.sleep(0.1)
+    time.sleep(0.1)
 
     script_dict = {
         "1": os.path.join("data", "instagram.py"),
