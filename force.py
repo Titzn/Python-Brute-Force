@@ -67,7 +67,7 @@ def main():
     check_for_updates()
     # Fading a ascii art text (green-blue)
     faded_text = fade.greenblue("""
-                     vprebeta[0.11(stable version)]
+                     vprebeta[0.11 stable version ]
   _______ _ _                _                _               __                   
  |__   __(_) |              | |              | |             / _|                  
     | |   _| |_ __ _ _ __   | |__  _ __ _   _| |_ ___ ______| |_ ___  _ __ ___ ___ 
