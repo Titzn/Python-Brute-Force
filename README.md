@@ -55,6 +55,6 @@ This script is meant for educational purposes only. Use it responsibly and ensur
 This project is licensed under the [MIT License](./LICENSE).
 
 ## Author
-- [Your Name](https://github.com/Titzn)
+- https://github.com/Titzn
 
 Feel free to contribute, report issues, or suggest improvements!
