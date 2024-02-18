@@ -15,6 +15,7 @@ import smtplib
 import colorama
 import tqdm
 from datetime import datetime 
+import fade 
 
 colorama.init()
 
@@ -63,8 +64,8 @@ def run_selected_script(script_dict, user_choice):
 
 def main():
     check_for_updates()
-
-    print(Fore.GREEN + f"""
+    # Fading a ascii art text (green-blue)
+    faded_text = fade.greenblue("""
                      vprebeta[0.1(stable version)]
  ______  ____  ______   ____  ____       ____   ____  __ __  ______    ___        _____   ___   ____      __    ___ 
 |      ||    ||      | /    ||    \     |    \ |    \|  |  ||      |  /  _]      |     | /   \ |    \    /  ]  /  _]
@@ -75,7 +76,8 @@ def main():
   |__|  |____|  |__|  |__|__||__|__|    |_____||__|\_|\__,_|  |__|  |_____|      |__|    \___/ |__|\_| \____||_____|
                                    [+]Github: https://github.com/Titzn/
                                    [+]Discord: titzn
-    """ + Fore.RESET)
+    """)
+    print(faded_text)
     time.sleep(0.1)
 
     script_dict = {
