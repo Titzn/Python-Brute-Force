@@ -44,7 +44,8 @@ def check_for_updates():
             print("Restarting")
             exit()
         else:
-            print(Fore.GREEN + "The script is up to date.")
+                faded_text2 = fade.greenblue("Script is update !")
+                print(faded_text2)
     else:
         print(f"Failed to check for updates. Status Code: {response.status_code}")
 
